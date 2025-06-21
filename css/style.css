@@ -1,0 +1,6 @@
+/* Corps du site */
+body{
+  background-image: url(../image/Wallpaper-Resonia.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
