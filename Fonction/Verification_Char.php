@@ -7,6 +7,10 @@ function Verification_Caractere($Str_Entree) {
 		if (retourCaractèresInterdit($String_Entree[$i]) == 0) {
 			$ListeChar = $ListeChar . $String_Entree[$i];
 		}
+        // Apostrophe
+        if (retourCaractèresInterdit($String_Entree[$i]) == 2) {
+			$ListeChar = $ListeChar . '`';
+		}
 		$i++;
 	}
 	if ($ListeChar == null) {
@@ -27,16 +31,16 @@ function retourCaractèresInterdit($str){
 			return 1;
 			break;
 		case '"':
-			return 1;
+			return 2;
 			break;
 		case '\'':
-			return 1;
+			return 2;
 			break;
 		case '(':
 			return 1;
 			break;
 		case '-':
-			return 1;
+			return 0;
 			break;
 		case 'è':
 			return 1;
@@ -72,10 +76,10 @@ function retourCaractèresInterdit($str){
 			return 1;
 			break;
 		case '`':
-			return 1;
+			return 2;
 			break;
 		case '\\':
-			return 1;
+			return 0;
 			break;
 		case '^':
 			return 1;
@@ -117,13 +121,13 @@ function retourCaractèresInterdit($str){
 			return 1;
 			break;
 		case '<':
-			return 1;
+			return 0;
 			break;
 		case '>':
-			return 1;
+			return 0;
 			break;
 		case '/':
-			return 1;
+			return 0;
 			break;
 		case '*':
 			return 1;

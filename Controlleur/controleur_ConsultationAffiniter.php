@@ -4,6 +4,7 @@
   $SecondePersonne = "0";
   $PremiereAffinite = "0";
   $SecondeAffinite = "0";
+  $Error = "0";
 
   $Personne = Select_Personne();
 
@@ -62,11 +63,10 @@
 
 
 
-    $Error = "0";
+
     // Affichage
     include_once "Vue/ConsultationAffiniter/index.php";
   }else {
-    $Error = "0";
     // Affichage
     include_once "Vue/ConsultationAffiniter/index.php";
   }
@@ -95,7 +95,7 @@
       return 7;
     }
     if ($A1 == $A2 && $B1 == $D2 && $C1 == $C2 && $D1 == $B2) {
-      if (($C1 == "P" && $C2 == "S") || ($C1 == "S" && $C2 == "P") || ($C1 == "G" && $C2 == "SD") || ($C1 == "SD" && $C2 == "G")) {
+      if (($B1 == "P" && $B2 == "S") || ($B1 == "S" && $B2 == "P") || ($B1 == "G" && $B2 == "SD") || ($B1 == "SD" && $B2 == "G")) {
         return 8; // Harmonieux
       }else {
         return 9; // Faible
@@ -154,89 +154,6 @@
       return 26;
     }
   }
-
-  // function TrouverAffinite($A1, $A2, $B1, $B2, $C1, $C2, $D1, $D2)
-  // {
-  //   if ($A1 == $A2 && $B1 == $B2 && $C1 == $C2 && $D1 == $D2) {
-  //     return "Double";
-  //   }
-  //   if ($A1 == $A2 && $B1 == $C2 && $C1 == $B2 && $D1 == $D2) {
-  //     return "Double Inversée";
-  //   }
-  //   if ($A1 == $C2 && $B1 == $B2 && $C1 == $A2 && $D1 == $D2) {
-  //     return "Miroir";
-  //   }
-  //   if ($A1 == $B2 && $B1 == $A2 && $C1 == $C2 && $D1 == $D2) {
-  //     return "Echo";
-  //   }
-  //   if ($A1 == $C2 && $B1 == $A2 && $C1 == $B2 && $D1 == $D2) {
-  //     return "Dimenssion parallèle";
-  //   }
-  //   if ($A1 == $B2 && $B1 == $C2 && $C1 == $A2 && $D1 == $D2) {
-  //     return "Profondeur";
-  //   }
-  //   if ($A1 == $A2 && $B1 == $B2 && $C1 == $D2 && $D1 == $C2) {
-  //     return "Complément";
-  //   }
-  //   if ($A1 == $A2 && $B1 == $D2 && $C1 == $C2 && $D1 == $B2) {
-  //     // if () {
-  //     //   // A voir avec 2léna
-  //     // }
-  //     return "Echo Faible ou Harmonieux";
-  //   }
-  //   if ($A1 == $A2 && $B1 == $D2 && $C1 == $B2 && $D1 == $C2) {
-  //     return "Adjuvant";
-  //   }
-  //   if ($A1 == $A2 && $B1 == $C2 && $C1 == $D2 && $D1 == $B2) {
-  //     return "Curiosité";
-  //   }
-  //   if ($A1 == $B2 && $B1 == $A2 && $C1 == $D2 && $D1 == $C2) {
-  //     // if () {
-  //     //   // A voir avec 2léna
-  //     // }
-  //     return "Echo Complémentaire ou contradictoire";
-  //   }
-  //   if ($A1 == $C2 && $B1 == $A2 && $C1 == $D2 && $D1 == $B2) {
-  //     return "Moteur";
-  //   }
-  //   if ($A1 == $B2 && $B1 == $D2 && $C1 == $A2 && $D1 == $C2) {
-  //     return "Révélateur";
-  //   }
-  //   if ($A1 == $D2 && $B1 == $B2 && $C1 == $C2 && $D1 == $A2) {
-  //     return "Double opposée";
-  //   }
-  //   if ($A1 == $D2 && $B1 == $A2 && $C1 == $C2 && $D1 == $B2) {
-  //     return "Entraineur";
-  //   }
-  //   if ($A1 == $B2 && $B1 == $D2 && $C1 == $C2 && $D1 == $A2) {
-  //     return "Aspirant";
-  //   }
-  //   if ($A1 == $D2 && $B1 == $A2 && $C1 == $B2 && $D1 == $C2) {
-  //     return "Affinité souteraine";
-  //   }
-  //   if ($A1 == $B2 && $B1 == $C2 && $C1 == $D2 && $D1 == $A2) {
-  //     return "Terrain dangereux";
-  //   }
-  //   if ($A1 == $D2 && $B1 == $B2 && $C1 == $A2 && $D1 == $C2) {
-  //     return "Allié efficace";
-  //   }
-  //   if ($A1 == $C2 && $B1 == $B2 && $C1 == $D2 && $D1 == $A2) {
-  //     return "Allié conflictuel";
-  //   }
-  //   if ($A1 == $C2 && $B1 == $D2 && $C1 == $A2 && $D1 == $B2) {
-  //     return "Cadre inversée";
-  //   }
-  //   if ($A1 == $D2 && $B1 == $C2 && $C1 == $B2 && $D1 == $A2) {
-  //     return "Opposée inversée";
-  //   }
-  //   if ($A1 == $C2 && $B1 == $D2 && $C1 == $B2 && $D1 == $A2) {
-  //     return "Traducteur";
-  //   }
-  //   if ($A1 == $D2 && $B1 == $C2 && $C1 == $A2 && $D1 == $B2) {
-  //     return "Immobilisateur";
-  //   }
-  // }
-
 
 
 ?>
