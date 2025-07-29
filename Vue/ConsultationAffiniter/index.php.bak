@@ -84,7 +84,7 @@ $Tableau = '<div class="row">
 
   if ($PremiereAffinite != "0" ) {
     foreach ($PremiereAffinite as $PremiereAffinite_Key) {
-      $Tableau = $Tableau . '<td><strong>'.$PremiereAffinite_Key['Nom'].'</strong></td>
+      $Tableau = $Tableau . '<td>'.$PremiereAffinite_Key['Nom'].'</td>
                              <td>'.str_replace("\r\n","<br>",$PremiereAffinite_Key['Description']).'</td>
                              <td>'.str_replace("\r\n","<br>",$PremiereAffinite_Key['Risque']).'</td>';
     }
@@ -109,7 +109,7 @@ $Tableau = $Tableau . '</tr>
 
   if ($SecondeAffinite != "0" ) {
     foreach ($SecondeAffinite as $SecondeAffinite_Key) {
-      $Tableau = $Tableau . '<td><strong>'.$SecondeAffinite_Key['Nom'].'</strong></td>
+      $Tableau = $Tableau . '<td>'.$SecondeAffinite_Key['Nom'].'</td>
                             <td>'.str_replace("\r\n","<br>",$SecondeAffinite_Key['Description']).'</td>
                             <td>'.str_replace("\r\n","<br>",$SecondeAffinite_Key['Risque']).'</td>';
     }

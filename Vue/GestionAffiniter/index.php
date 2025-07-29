@@ -12,6 +12,7 @@
                <thead>
                  <tr>
                    <th>Id</th>
+                   <th>Codex</th>
                    <th>Nom</th>
                    <th>Description</th>
                    <th>Risque</th>
@@ -23,6 +24,11 @@
                foreach ($Affiniter as $Affiniter_Key) {
                  $Tableau = $Tableau . '<tr><form action="" method="post">
                         <td>'.$Affiniter_Key['Type'].'</td>
+                        <td>
+                          <div class="form-group">
+                            <input type="text" name="Codex" class="form-control" value="'.$Affiniter_Key['Codex'].'">
+                          </div>
+                        </td>
                         <td>
                           <div class="form-group">
                             <input type="text" name="Nom" class="form-control" value="'.$Affiniter_Key['Nom'].'">

@@ -8,10 +8,10 @@ function Update_Personne($Id, $Nom, $Id_Categorie)
   return $stmt->execute();
 }
 
-function Update_Affiniter($Id, $Nom, $Description, $Risque)
+function Update_Affiniter($Id, $Codex, $Nom, $Description, $Risque)
 {
   $link = InitPDO();
-  $Requete =  "UPDATE tb_affinite SET Nom = '$Nom', Description = '$Description', Risque = '$Risque' WHERE Id = '$Id'";
+  $Requete =  "UPDATE tb_affinite SET Codex = '$Codex', Nom = '$Nom', Description = '$Description', Risque = '$Risque' WHERE Id = '$Id'";
   $stmt = $link->prepare($Requete);
   return $stmt->execute();
 }

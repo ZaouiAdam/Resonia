@@ -58,12 +58,6 @@
       TrouverAffinite($SecondePersonneVie, $PremierePersonneVie, $SecondePersonneAction, $PremierePersonneAction, $SecondePersonnePensee, $PremierePersonnePensee, $SecondePersonneD, $PremierePersonneD)
     );
 
-    $PremierePersonneAffinite = TrouverAffinite($PremierePersonneVie, $SecondePersonneVie, $PremierePersonneAction, $SecondePersonneAction, $PremierePersonnePensee, $SecondePersonnePensee, $PremierePersonneD, $SecondePersonneD);
-    $SecondePersonneAffinite = TrouverAffinite($SecondePersonneVie, $PremierePersonneVie, $SecondePersonneAction, $PremierePersonneAction, $SecondePersonnePensee, $PremierePersonnePensee, $SecondePersonneD, $PremierePersonneD);
-
-
-
-
     // Affichage
     include_once "Vue/ConsultationAffiniter/index.php";
   }else {
